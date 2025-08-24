@@ -67,7 +67,9 @@ print(df1)
 ```
 
 ## OUTPUT:
-SHOW YOUR OUTPUT HERE
+
+<img width="839" height="717" alt="image" src="https://github.com/user-attachments/assets/bf91f26f-3d29-4114-a475-fea6b9a6abe4" />
+<img width="809" height="622" alt="image" src="https://github.com/user-attachments/assets/b02ced04-de10-40fe-aa26-d3913b72edfc" />
 
 
 ## RESULT:
