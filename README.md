@@ -1,5 +1,5 @@
-<H3>ENTER YOUR NAME</H3>
-<H3>ENTER YOUR REGISTER NO.</H3>
+<H3>Name : D Vergin Jenifer</H3>
+<H3>Reg no. : 212223240174</H3>
 <H3>EX. NO.1</H3>
 <H3>DATE</H3>
 <H1 ALIGN =CENTER> Introduction to Kaggle and Data preprocessing</H1>
@@ -37,8 +37,34 @@ STEP 5:Normalizing the data<BR>
 STEP 6:Splitting the data into test and train<BR>
 
 ##  PROGRAM:
-TYPE YOUR CODE HERE
+```
+from google.colab import files
+import pandas as pd
+import io
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import LabelEncoder, MinMaxScaler
+from sklearn.model_selection import train_test_split
+df = pd.read_csv('/content/Churn_Modelling.csv')
+print(df)
+x = df.iloc[:, :-1].values
+print(x)
+y = df.iloc[:, -1].values
+print(y)
+print(df.isnull().sum())
+df.fillna(df.mean(numeric_only=True).round(1), inplace=True)
+print(df.isnull().sum())
+y = df.iloc[:, -1].values
+print(y)
+df.duplicated()
+print(df['CreditScore'].describe())
+df['Gender'] = LabelEncoder().fit_transform(df['Gender'])
+df['Geography'] = LabelEncoder().fit_transform(df['Geography'])
+df = df.drop(['RowNumber', 'CustomerId', 'Surname'], axis=1)
 
+scaler = MinMaxScaler()
+df1 = pd.DataFrame(scaler.fit_transform(df))
+print(df1)
+```
 
 ## OUTPUT:
 SHOW YOUR OUTPUT HERE
